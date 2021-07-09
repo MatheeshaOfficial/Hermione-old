@@ -65,8 +65,7 @@ STICKERS = (
     "CAACAgUAAxkBAAICimC2eqiUXsLnA7bp_gABFF2-n_dQxgACLgIAAkid-VUoAtdfzSB7Dx8E",
     "CAACAgUAAxkBAAICi2C2eshXjWebgg0VGcJKUHrNynZZAALWAAMiVYE1SHwr-xT2vPYfBA",
     "CAACAgUAAxkBAAICumC2fOVz4FBjVOJ1hujVuKRdvMlvAAI6AgACXWoJV-gIqrglf23zHwQ",
-    "CAACAgUAAxkBAAICu2C2fOd1vNLl9vJtVXbYKqKYCSVbAAKfAQACjTMJV_P2fCpoFMshHwQ"
-
+    "CAACAgUAAxkBAAICu2C2fOd1vNLl9vJtVXbYKqKYCSVbAAKfAQACjTMJV_P2fCpoFMshHwQ",
 )
 
 
@@ -93,30 +92,36 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
-            strings["btn_source"], url="https://www.instagram.com/mr.matheesha_official/"
+            strings["btn_source"],
+            url="https://www.instagram.com/mr.matheesha_official/",
         ),
     )
     buttons.add(
-        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/CeylonTech_plus"),
+        InlineKeyboardButton(
+            strings["btn_channel"], url="https://t.me/CeylonTech_plus"
+        ),
         InlineKeyboardButton(
             strings["btn_group"], url="https://t.me/CeylonTech_Official"
         ),
     )
     buttons.add(
-        InlineKeyboardButton("▶️Youtube", url="https://youtube.com/channel/UC04AUyOQmht0c8Bgc2GehRw"),
         InlineKeyboardButton(
-            "🎭Owner", url="https://t.me/percy_jackson_4",
+            "▶️Youtube", url="https://youtube.com/channel/UC04AUyOQmht0c8Bgc2GehRw"
+        ),
+        InlineKeyboardButton(
+            "🎭Owner",
+            url="https://t.me/percy_jackson_4",
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-             "😍Add Hermione to your group",
+            "😍Add Hermione to your group",
             url=f"https://telegram.me/miss_musicybot?startgroup=true",
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-             "😍Add Music Assistant",
+            "😍Add Music Assistant",
             url=f"https://telegram.me/sing_hermione?startgroup=true",
         )
     )

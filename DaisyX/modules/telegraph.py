@@ -1,4 +1,4 @@
-# COPYRIGHT (C) BY LEGENDX22 AND PROBOYX
+# COPYRIGHT (C) BY 𝑯𝒆𝒓𝒎𝒊𝒐𝒏𝒆 𝑶𝒇𝒇𝒊𝒄𝒊𝒂𝒍 @HermioneUpdates
 from DaisyX.services.events import register
 from DaisyX.services.telethon import tbot
 
@@ -46,7 +46,7 @@ async def _(event):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.edit(
-                    "Uploaded to https://telegra.ph{} in {} seconds.".format(
+                    "Uploaded to https://telegra.ph{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒅 𝒃𝒚 @HermioneUpdates".format(
                         media_urls[0], (ms + ms_two)
                     ),
                     link_preview=True,
@@ -75,7 +75,7 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).seconds
             await event.reply(
-                "Pasted to https://telegra.ph/{} in {} seconds.".format(
+                "Pasted to https://telegra.ph/{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 @HermioneUpdates".format(
                     response["path"], ms
                 ),
                 link_preview=True,
@@ -96,6 +96,7 @@ file_helpo = file_help.replace("_", " ")
 __help__ = """
  - /tm : Get Telegraph Link Of Replied Media
  - /tt: Get Telegraph Link of Replied Text
+ - 𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
 """
 
-__mod_name__ = "Telegraph 😄"
+__mod_name__ = "Telegraph"

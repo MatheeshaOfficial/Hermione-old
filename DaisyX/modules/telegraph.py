@@ -1,5 +1,5 @@
 # COPYRIGHT (C) BY LEGENDX22 AND PROBOYX
-from DaisyX import telethn as tbot
+from DaisyX import tbot
 from DaisyX.events import register
 
 TMP_DOWNLOAD_DIRECTORY = "./"

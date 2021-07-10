@@ -26,8 +26,9 @@ from traceback import format_exc
 
 from pyrogram import filters
 from pyrogram.types import Message
+from DaisyX.services.pyrogram import pbot
 
-from DaisyX import app, arq
+
 from DaisyX.services.errors import capture_err
 
 __MODULE__ = "Quotly"

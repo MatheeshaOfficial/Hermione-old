@@ -27,7 +27,7 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from DaisyX import SUDOERS, USERBOT_PREFIX, app, app2, arq
+from DaisyX import app, arq
 from DaisyX.services.errors import capture_err
 
 __MODULE__ = "Quotly"
@@ -64,7 +64,6 @@ def isArgInt(message: Message) -> bool:
         return [False, 0]
 
 
-@app2.on_message(filters.command("q", prefixes=USERBOT_PREFIX) & filters.user(SUDOERS))
 @app.on_message(filters.command("q") & ~filters.private)
 @capture_err
 async def quotly_func(client, message: Message):

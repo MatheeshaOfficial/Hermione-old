@@ -29,6 +29,7 @@ from pyrogram.types import Message
 
 from DaisyX.services.errors import capture_err
 from DaisyX.services.pyrogram import pbot
+from DaisyX.function.inlinehelper import arq
 
 __MODULE__ = "Quotly"
 __HELP__ = """

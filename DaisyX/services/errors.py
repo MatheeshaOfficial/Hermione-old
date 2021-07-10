@@ -2,9 +2,6 @@ import sys
 import traceback
 from functools import wraps
 
-from DaisyX import SUPPORT_CHAT
-from DaisyX.services.pyrogram import pbot
-
 
 def split_limits(text):
     if len(text) < 2048:
@@ -42,9 +39,7 @@ def capture_err(func):
             )
             error_feedback = split_limits(
                 "**ERROR** | `{}` | `{}`\n\n```{}```\n\n```{}```\n".format(
-                    0
-                    if not message.from_user
-                    else message.from_user.id,
+                    0 if not message.from_user else message.from_user.id,
                     0 if not message.chat else message.chat.id,
                     message.text or message.caption,
                     "".join(errors),

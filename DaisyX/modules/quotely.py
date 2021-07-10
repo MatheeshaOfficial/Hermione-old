@@ -26,8 +26,8 @@ from traceback import format_exc
 
 from pyrogram import filters
 from pyrogram.types import Message
-from wbb import SUDOERS, USERBOT_PREFIX, app, app2, arq
-from wbb.core.decorators.errors import capture_err
+from DaisyX import SUDOERS, USERBOT_PREFIX, app, app2, arq
+from DaisyX.services.errors import capture_err
 
 __MODULE__ = "Quotly"
 __HELP__ = """
@@ -35,7 +35,7 @@ __HELP__ = """
 /q [INTEGER] - To quote more than 1 messages.
 /q r - to quote a message with it's reply
 
-Use .q to quote using userbot
+𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
 """
 
 

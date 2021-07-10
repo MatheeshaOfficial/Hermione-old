@@ -907,7 +907,7 @@ async def inline_query_handler(client, query):
                 + app_link
                 + "'>View in Play Store</a>"
             )
-            app_details += "\n\n===> @DaisySupport_Official <==="
+            app_details += "\n\n===> @HermioneUpdates <==="
             rip.append(
                 InlineQueryResultArticle(
                     title=f"Datails of {app_name}",

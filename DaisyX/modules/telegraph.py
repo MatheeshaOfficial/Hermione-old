@@ -1,7 +1,6 @@
 # COPYRIGHT (C) BY LEGENDX22 AND PROBOYX
-from DaisyX import tbot
-from DaisyX.events import register
-
+from DaisyX.services.telethon import tbot
+from DaisyX.services.events import register
 TMP_DOWNLOAD_DIRECTORY = "./"
 import os
 from datetime import datetime

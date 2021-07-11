@@ -24,4 +24,3 @@ async def take_ss(_, message):
         await m.edit("No Such Website.")
         return
     await m.delete()
-    

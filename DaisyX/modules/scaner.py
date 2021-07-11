@@ -6,8 +6,8 @@ from telethon import *
 from telethon.tl import functions
 
 from DaisyX import MONGO_DB_URI
-from DaisyX.services.telethon import tbot
 from DaisyX.services.events import register
+from DaisyX.services.telethon import tbot
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)

@@ -4,7 +4,6 @@
 
 from pyrogram import filters
 
-from DaisyX.function.pluginhelpers import admins_only
 from DaisyX.services.pyrogram import pbot as app
 
 

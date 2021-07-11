@@ -74,7 +74,7 @@ async def asciiart(event):
     os.remove("./scanned.jpg")
 
 
-__mod_name__ = "Hi"
+__mod_name__ = "Camscaner"
 __help__ = """
 <b>CamScaner</b>
  - /camscanner: Reply to a image to scan and improve it's clarity.

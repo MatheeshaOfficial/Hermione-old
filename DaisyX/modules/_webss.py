@@ -26,3 +26,12 @@ async def take_ss(_, message):
         await m.edit("No Such Website.")
         return
     await m.delete()
+
+__mod_name__ = "Hi"
+__help__ = """
+<b>WebSS Help @Miss_MusicyBot</b>
+- /webss <url>
+Get Any web site's screenshot in few second 
+
+𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
+"""

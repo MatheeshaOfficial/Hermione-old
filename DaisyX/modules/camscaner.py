@@ -5,9 +5,10 @@ from pymongo import MongoClient
 from telethon import *
 from telethon.tl import functions
 
-from DaisyX import MONGO_DB_URI
 from DaisyX.services.events import register
 from DaisyX.services.telethon import tbot
+
+MONGO_DB_URI = os.environ.get("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)

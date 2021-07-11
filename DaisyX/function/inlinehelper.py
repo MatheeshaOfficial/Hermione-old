@@ -88,14 +88,14 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[𝙷𝚎𝚛𝚖𝚒𝚘𝚗𝚎 👩‍🦰](https://github.com/PercyOfficial/):**
+**[𝙷𝚎𝚛𝚖𝚒𝚘𝚗𝚎💃](https://github.com/PercyOfficial/):**
 **MainBot:** `{bot_state}`
 **UserBot:** `Alive`
 **Python:** `3.9`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [Assistant](t.me/sing_hermione )
+**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [Assistant](t.me/sing_hermione)
 """
     answers.append(
         InlineQueryResultArticle(

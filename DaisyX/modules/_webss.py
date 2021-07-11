@@ -28,9 +28,9 @@ async def take_ss(_, message):
     await m.delete()
 
 
-__mod_name__ = "Hi"
+__mod_name__ = "WebShot"
 __help__ = """
-<b>WebSS Help @Miss_MusicyBot</b>
+<b>WebShot</b>
 - /webss <url>
 Get Any web site's screenshot in few second 
 

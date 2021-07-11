@@ -27,6 +27,7 @@ async def take_ss(_, message):
         return
     await m.delete()
 
+
 __mod_name__ = "Hi"
 __help__ = """
 <b>WebSS Help @Miss_MusicyBot</b>

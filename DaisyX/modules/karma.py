@@ -220,4 +220,3 @@ async def karma(_, message):
         await message.reply_text(
             f"Removed Chat {chat_id} To Database. Karma will be disabled here"
         )
-

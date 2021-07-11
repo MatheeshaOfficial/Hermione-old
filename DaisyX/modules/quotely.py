@@ -36,6 +36,7 @@ __HELP__ = """
 /q - To quote a message.
 /q [INTEGER] - To quote more than 1 messages.
 /q r - to quote a message with it's reply
+pm not support 😭 only Groups 🤗
 
 𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
 """
@@ -124,3 +125,12 @@ async def quotly_func(client, message: Message):
         )
         e = format_exc()
         print(e)
+
+__mod_name__ = "Quotly"
+__help__ = """
+- /q - To quote a message.
+_ /q [INTEGER] - To quote more than 1 messages.
+- /q r - to quote a message with it's reply
+- pm not support 😭 only Groups 🤗
+- 𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
+"""

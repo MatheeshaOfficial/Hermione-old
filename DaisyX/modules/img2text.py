@@ -1,7 +1,7 @@
 import os
 
 import cloudmersive_virus_api_client
-from cloudmersive_ocr_api_client.rest import ApiException
+from cloudmersive_virus_api_client.rest import ApiException
 from pymongo import MongoClient
 from telethon import *
 from telethon.tl import functions, types

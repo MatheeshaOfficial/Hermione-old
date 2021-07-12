@@ -1,6 +1,6 @@
 import os
 
-import cloudmersive_ocr_api_client
+import cloudmersive_virus_api_client
 from cloudmersive_ocr_api_client.rest import ApiException
 from pymongo import MongoClient
 from telethon import *
@@ -16,10 +16,10 @@ client = MongoClient(MONGO_DB_URI)
 db = client["missjuliarobot"]
 approved_users = db.approve
 
-configuration = cloudmersive_ocr_api_client.Configuration()
+configuration = cloudmersive_virus_api_client.Configuration()
 configuration.api_key["Apikey"] = VIRUS_API_KEY
-api_instance = cloudmersive_ocr_api_client.ImageOcrApi(
-    cloudmersive_ocr_api_client.ApiClient(configuration)
+api_instance = cloudmersive_virus_api_client.ImageOcrApi(
+    cloudmersive_virus_api_client.ApiClient(configuration)
 )
 
 

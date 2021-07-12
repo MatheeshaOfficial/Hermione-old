@@ -45,27 +45,16 @@ def help_markup(modules):
 
 
 STICKERS = (
-    "CAACAgIAAxkBAAICdWC2edwaC1hj5tD2FTtydWE6sAO1AAKjAQACEBptIkfOxfML2NdjHwQ",
-    "CAACAgIAAxkBAAICeGC2efBa2B_L55WpbcagcGBzzot4AAJ6AQACEBptIpydt0hO73LeHwQ",
-    "CAACAgIAAxkBAAICeWC2egSQp-jkQFMW_9d-pnv2sIOwAAJoAQACEBptIvU3HCn2F6RvHwQ",
-    "CAACAgIAAxkBAAICemC2egTl3ry5VSWSb8AmtDDmOP3RAAJpAQACEBptItP50YqvnDOtHwQ",
-    "CAACAgIAAxkBAAICe2C2egRND4q_KohS1EAfOkaoGromAAJeAQACEBptItNORzH8jWOyHwQ",
-    "CAACAgIAAxkBAAICfGC2egbdINXuuuvaUV0UmPYXKqrEAAJZAQACEBptIh2VbDlfzkAfHwQ",
-    "CAACAgIAAxkBAAICfWC2eg5wUklnzGIhZtlstAO65AEnAAJ1AQACEBptInCKj7c5KByPHwQ",
-    "CAACAgIAAxkBAAICfmC2ehA5DUhuvj8NqI_R0OW0BypiAAJXAQACEBptIqUrPFT7ejSqHwQ",
-    "CAACAgIAAxkBAAICf2C2ehJl3LsbLlK9B8FC3UFlFHLfAAJ5AQACEBptIrh-txD7aZGTHwQ",
-    "CAACAgIAAxkBAAICgGC2eixmDbpc3Cj1z-2SajCMlHwRAAJTAQACEBptIusJVTXP9-ZJHwQ",
-    "CAACAgIAAxkBAAICgWC2ejoKHhYxPp8YmUqrjddmK-j3AAJmAQACEBptIgELm-YRAtc5HwQ",
-    "CAACAgIAAxkBAAICgmC2ejy-3WNj7AW6n0HJnKHNZwrnAAKSAQACEBptIuuEW7yIvJNpHwQ",
-    "CAACAgIAAxkBAAICg2C2ekQ64wfSzD7H9mUwFKRyv99bAAKpAQACEBptIsp-kz6P8Yg3HwQ",
-    "CAACAgIAAxkBAAIChWC2ekaOmPF44EtK5gaGPp4nbfEBAAJ5AQACEBptIrh-txD7aZGTHwQ",
-    "CAACAgIAAxkBAAIChmC2emDLLWY-WNbNDHNFs7dP0_2CAALIAQACEBptIg5zcps1Oc8WHwQ",
-    "CAACAgUAAxkBAAICh2C2epS0NTXI5wjdhmT4GVsCMxc1AAJmAQACaFT5Vd-coYpBjPcDHwQ",
-    "CAACAgUAAxkBAAICiGC2epeJUBKTKA34q_JcLCvwd-RYAAIvAQACJSX4VTQhEYMYTbB2HwQ",
-    "CAACAgUAAxkBAAICimC2eqiUXsLnA7bp_gABFF2-n_dQxgACLgIAAkid-VUoAtdfzSB7Dx8E",
-    "CAACAgUAAxkBAAICi2C2eshXjWebgg0VGcJKUHrNynZZAALWAAMiVYE1SHwr-xT2vPYfBA",
-    "CAACAgUAAxkBAAICumC2fOVz4FBjVOJ1hujVuKRdvMlvAAI6AgACXWoJV-gIqrglf23zHwQ",
-    "CAACAgUAAxkBAAICu2C2fOd1vNLl9vJtVXbYKqKYCSVbAAKfAQACjTMJV_P2fCpoFMshHwQ",
+    "CAACAgUAAxkBAAIivWDr2T0buc1xq8Sschbe2OqgMiruAALQAwACZupgVztQDgABVViikx4E",
+    "CAACAgUAAxkBAAIivmDr2U2tWmIwlN0FfBgsC5dpzP1tAALVAwACf8NgV9WDkUEV1bV7HgQ",
+    "CAACAgUAAxkBAAIiv2Dr2VfYnGTRK1m7HrblirkAASWEkQACngMAAr2uYFdfOOy7PanETh4E",
+    "CAACAgUAAxkBAAIiwGDr2W-R0BHMivAsBbsm4lTn77zmAAJJBAAClbxhV02b12_bQE8_HgQ",
+    "CAACAgUAAxkBAAIiwWDr2XZE7HRx-CvtXf0tJK5-FbufAALjAgACEJRgVwlEAaqcX_qqHgQ",
+    "CAACAgUAAxkBAAIiwmDr2X3tCHzCp53-5gbBQNbdYVPsAAIwBAACimZgV1j0HuTR_ej6HgQ",
+    "CAACAgUAAxkBAAIiw2Dr2YVHF4gvDkn3SP9D9WdIKyawAALGAwACe6hhV84cO0her4U8HgQ",
+    "CAACAgUAAxkBAAIixGDr2Yvpg91EAAFsh44spe2TlDXxlAACEgMAAnJuWFcK-J0yqY2qzh4E",
+    "CAACAgUAAxkBAAIixmDr2ZrhwXjNKeaSj3Pcn-wj2D-xAALjAgACEJRgVwlEAaqcX_qqHgQ",
+    "CAACAgUAAxkBAAIixWDr2ZFWitNjNGRFdQEKdANGkZcJAALaAgACUSJhV40-51_ZbzozHgQ"
 )
 
 
@@ -93,24 +82,15 @@ async def get_start_func(message, strings, edit=False):
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
             strings["btn_source"],
-            url="https://www.instagram.com/mr.matheesha_official/",
-        ),
-    )
-    buttons.add(
-        InlineKeyboardButton(
-            strings["btn_channel"], url="https://t.me/CeylonTech_plus"
-        ),
-        InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/CeylonTech_Official"
-        ),
-    )
-    buttons.add(
-        InlineKeyboardButton(
-            "▶️Youtube", url="https://youtube.com/channel/UC04AUyOQmht0c8Bgc2GehRw"
-        ),
-        InlineKeyboardButton(
-            "🎭Owner",
             url="https://t.me/percy_jackson_4",
+        ),
+    )
+    buttons.add(
+        InlineKeyboardButton(
+            strings["btn_channel"], url="https://t.me/HermioneUpdates"
+        ),
+        InlineKeyboardButton(
+            strings["btn_group"], url="https://t.me/HermioneMusic_Help"
         ),
     )
     buttons.add(
@@ -119,12 +99,7 @@ async def get_start_func(message, strings, edit=False):
             url=f"https://telegram.me/miss_musicybot?startgroup=true",
         ),
     )
-    buttons.add(
-        InlineKeyboardButton(
-            "😍Add Music Assistant",
-            url=f"https://telegram.me/sing_hermione?startgroup=true",
-        )
-    )
+    
     # Handle error when user click the button 2 or more times simultaneously
     with suppress(MessageNotModified):
         await task(strings["start_hi"], reply_markup=buttons)

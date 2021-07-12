@@ -139,8 +139,12 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup()
-    buttons.add(InlineKeyboardButton(text=text, url="https://t.me/miss_musicybot?start"))
-    buttons.add(InlineKeyboardButton(text="updates", url="https://t.me/HermioneUpdates"))
+    buttons.add(
+        InlineKeyboardButton(text=text, url="https://t.me/miss_musicybot?start")
+    )
+    buttons.add(
+        InlineKeyboardButton(text="updates", url="https://t.me/HermioneUpdates")
+    )
     await message.reply(strings["help_header"], reply_markup=button)
 
 

@@ -7,6 +7,8 @@ from telethon import *
 from telethon.tl import functions, types
 from telethon.tl.types import *
 
+from DaisyX.config import get_str_key
+
 from DaisyX import *
 from DaisyX.services.telethon import tbot
 from DaisyX.services.events import register
@@ -16,6 +18,8 @@ client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
 db = client["missjuliarobot"]
 approved_users = db.approve
+
+VIRUS_API_KEY = get_str_key("VIRUS_API_KEY", required=False)
 
 configuration = cloudmersive_virus_api_client.Configuration()
 configuration.api_key["Apikey"] = VIRUS_API_KEY

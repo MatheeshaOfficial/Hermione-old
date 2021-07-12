@@ -54,7 +54,7 @@ STICKERS = (
     "CAACAgUAAxkBAAIiw2Dr2YVHF4gvDkn3SP9D9WdIKyawAALGAwACe6hhV84cO0her4U8HgQ",
     "CAACAgUAAxkBAAIixGDr2Yvpg91EAAFsh44spe2TlDXxlAACEgMAAnJuWFcK-J0yqY2qzh4E",
     "CAACAgUAAxkBAAIixmDr2ZrhwXjNKeaSj3Pcn-wj2D-xAALjAgACEJRgVwlEAaqcX_qqHgQ",
-    "CAACAgUAAxkBAAIixWDr2ZFWitNjNGRFdQEKdANGkZcJAALaAgACUSJhV40-51_ZbzozHgQ"
+    "CAACAgUAAxkBAAIixWDr2ZFWitNjNGRFdQEKdANGkZcJAALaAgACUSJhV40-51_ZbzozHgQ",
 )
 
 
@@ -99,7 +99,7 @@ async def get_start_func(message, strings, edit=False):
             url=f"https://telegram.me/miss_musicybot?startgroup=true",
         ),
     )
-    
+
     # Handle error when user click the button 2 or more times simultaneously
     with suppress(MessageNotModified):
         await task(strings["start_hi"], reply_markup=buttons)

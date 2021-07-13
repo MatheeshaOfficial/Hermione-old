@@ -60,7 +60,7 @@ async def hmm(_, message):
             await lel.edit("Daisy AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"Daisy AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Hermione AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
@@ -104,8 +104,8 @@ async def hmm(client, message):
         test = test.replace("daisy", "Aco")
         test = test.replace("Daisy", "Aco")
         querystring = {
-            "bid": "178",
-            "key": "sX5A2PcYZbsN5EY6",
+            "bid": "155752",
+            "key": "MMtvNMsssIColXkn",
             "uid": "mashape",
             "msg": {test},
         }
@@ -166,8 +166,8 @@ async def hmm(client, message):
         test = test.replace("daisy", "Aco")
         test = test.replace("Daisy", "Aco")
         querystring = {
-            "bid": "178",
-            "key": "sX5A2PcYZbsN5EY6",
+            "bid": "155752",
+            "key": "MMtvNMsssIColXkn",
             "uid": "mashape",
             "msg": {test},
         }
@@ -236,8 +236,8 @@ async def inuka(client, message):
     test = test.replace("daisy", "Aco")
     test = test.replace("Daisy", "Aco")
     querystring = {
-        "bid": "178",
-        "key": "sX5A2PcYZbsN5EY6",
+        "bid": "155752",
+        "key": "MMtvNMsssIColXkn",
         "uid": "mashape",
         "msg": {test},
     }
@@ -313,8 +313,8 @@ async def inuka(client, message):
     test = test.replace("daisy", "Aco")
     test = test.replace("Daisy", "Aco")
     querystring = {
-        "bid": "178",
-        "key": "sX5A2PcYZbsN5EY6",
+        "bid": "155752",
+        "key": "MMtvNMsssIColXkn",
         "uid": "mashape",
         "msg": {test},
     }

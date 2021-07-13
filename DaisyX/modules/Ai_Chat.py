@@ -70,7 +70,7 @@ async def hmm(_, message):
             await lel.edit("Daisy AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"Daisy AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"Hermione AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -349,6 +349,8 @@ DAISY AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
 <b> Assistant </b>
  - /ask [question]: Ask question from daisy
  - /ask [reply to voice note]: Get voice reply
+ 
+Powerd By @HermioneUpdates
  
 """
 

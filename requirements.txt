@@ -1,7 +1,7 @@
 # General
-telethon
+telethon==1.19.5
 pyrogram>=1.0.7
-aiograme>=2.13
+aiogram == 2.13
 
 # DBs
 redis
@@ -54,7 +54,6 @@ feedparser
 tldextract
 dateparser
 twistdl
-psutil
 
 #Pyrogram
 tgCrypto>=1.2.2
@@ -125,5 +124,5 @@ pygithub
 Skem==0.3.3
 gogoanime-api
 
-
-
+#states 
+psutil

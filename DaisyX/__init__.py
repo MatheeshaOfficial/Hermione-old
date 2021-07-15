@@ -80,5 +80,5 @@ TEMP_DOWNLOAD_DIRECTORY = "./"
 # String Session
 STRING_SESSION = get_str_key("STRING_SESSION", required=True)
 
-#time
+# time
 bot_start_time = time.time()

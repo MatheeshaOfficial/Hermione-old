@@ -31,7 +31,7 @@ from . import MOD_HELP
 from .language import select_lang_keyboard
 from .utils.disable import disableable_dec
 from .utils.language import get_strings_dec
-from DaisyX.modules.states.bot_sys_stats
+from DaisyX.modules.states import bot_sys_stats
 
 helpmenu_cb = CallbackData("helpmenu", "mod")
 

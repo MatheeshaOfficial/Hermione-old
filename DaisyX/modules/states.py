@@ -1,18 +1,14 @@
-
-
 # Stats Module
-import asyncio
 import os
-import subprocess
 import time
 
 import psutil
 from pyrogram import filters
-from pyrogram.errors import FloodWait
 
 from DaisyX import bot_start_time
 from DaisyX.core.decorators.errors import capture_err
 from DaisyX.utils import formatter
+
 
 async def bot_sys_stats():
     bot_uptime = int(time.time() - bot_start_time)

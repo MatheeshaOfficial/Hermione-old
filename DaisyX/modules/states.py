@@ -25,10 +25,3 @@ RAM: {mem}%
 DISK: {disk}%
 """
     return stats
-
-
-@app.on_message(filters.user(SUDOERS) & filters.command("stats"))
-@capture_err
-async def get_stats(_, message):
-    stats = await bot_sys_stats()
-    await message.reply_text(stats)

@@ -2,10 +2,8 @@ import os
 import time
 
 import psutil
-from pyrogram import filters
 
 from DaisyX import bot_start_time
-from DaisyX.core.decorators.errors import capture_err
 from DaisyX.utils import formatter
 
 

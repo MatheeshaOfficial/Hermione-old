@@ -126,10 +126,12 @@ async def help_cb(event, strings):
 async def set_lang_cb(event):
     await select_lang_keyboard(event.message, edit=True)
 
-@pbot.on_callback_query(filters.regex("stats_callback"))
+@pbot.on_callback_query(regexp="stats_callback", f="cb")
 async def stats_callback(_, CallbackQuery):
     text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    await pbot.answer_callback_query(
+        CallbackQuery.id, text, show_alert=True
+    )
 
 
 @register(regexp="go_to_start", f="cb")

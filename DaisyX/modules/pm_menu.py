@@ -31,6 +31,7 @@ from . import MOD_HELP
 from .language import select_lang_keyboard
 from .utils.disable import disableable_dec
 from .utils.language import get_strings_dec
+from DaisyX.modules.states.stats_callbacc
 
 helpmenu_cb = CallbackData("helpmenu", "mod")
 
@@ -91,6 +92,11 @@ async def get_start_func(message, strings, edit=False):
         ),
         InlineKeyboardButton(
             strings["btn_group"], url="https://t.me/HermioneMusic_Help"
+        ),
+    )
+    buttons.add(
+        InlineKeyboardButton(
+            text="System Stats 💻", callback_data="stats_callback"
         ),
     )
     buttons.add(

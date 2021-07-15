@@ -31,7 +31,7 @@ from . import MOD_HELP
 from .language import select_lang_keyboard
 from .utils.disable import disableable_dec
 from .utils.language import get_strings_dec
-from DaisyX.modules.states.stats_callbacc
+from DaisyX.modules.states.bot_sys_stats
 
 helpmenu_cb = CallbackData("helpmenu", "mod")
 
@@ -125,7 +125,7 @@ async def set_lang_cb(event):
     await select_lang_keyboard(event.message, edit=True)
 
 @pbot.on_callback_query(filters.regex("stats_callback"))
-async def stats_callbacc(_, CallbackQuery):
+async def stats_callback(_, CallbackQuery):
     text = await bot_sys_stats()
     await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
 

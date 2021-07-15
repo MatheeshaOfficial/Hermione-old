@@ -8,6 +8,8 @@ from DaisyX import bot_start_time
 from DaisyX.core.decorators.errors import capture_err
 from DaisyX.utils import formatter
 
+import asyncio
+import subprocess
 
 async def bot_sys_stats():
     bot_uptime = int(time.time() - bot_start_time)

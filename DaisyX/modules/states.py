@@ -6,7 +6,7 @@ import subprocess
 import psutil
 
 from DaisyX import bot_start_time
-from DaisyX.utils import formatter
+from.utils import formatter
 
 
 async def bot_sys_stats():

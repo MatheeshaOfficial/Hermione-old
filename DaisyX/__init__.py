@@ -15,6 +15,7 @@
 
 import asyncio
 import logging
+import time
 
 import spamwatch
 from aiogram import Bot, Dispatcher, types
@@ -78,3 +79,6 @@ TEMP_DOWNLOAD_DIRECTORY = "./"
 
 # String Session
 STRING_SESSION = get_str_key("STRING_SESSION", required=True)
+
+#time
+bot_start_time = time.time()

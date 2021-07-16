@@ -92,7 +92,7 @@ async def lego(event):
     pointsize = 500
     fillcolor = "red"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Sophia/etc/Font.ttf", 330)
+    font = ImageFont.truetype("./DaisyX/stuff/Font.ttf", 330)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -100,13 +100,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y= ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="red")
-    fname2 = "SophiaLogo.png"
+    fname2 = "HermioneLogo.png"
     img.save(fname2, "png")
     await tbot.send_file(event.chat_id, fname2, caption="Made By @SophiaSLBot 💞")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @SophiaX_Support, {e}')
+   await event.reply(f'Error Go to Help From @HermioneMusic_Help , {e}')
 
     
 
@@ -126,13 +126,13 @@ async def lego(event):
  await event.reply('Creating your logo...')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Sophia/etc/blackbg.jpg')
+    img = Image.open('./DaisyX/stuff/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "gold"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Sophia/etc/Font.ttf", 330)
+    font = ImageFont.truetype("./DaisyX/stuff/Font.ttf", 330)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -140,13 +140,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y= ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yelllo")
-    fname2 = "SophiaLogo.png"
+    fname2 = "HermioneLogo.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @SophiaSLBot 💞")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @Miss_MusicyBot 💞")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @SophiaX_Support, {e}')
+   await event.reply(f'Error Go to Help From  @HermioneMusic_Help, {e}')
 
 
 
@@ -166,13 +166,13 @@ async def lego(event):
  await event.reply('Creating your logo...')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Sophia/etc/blackbg.jpg')
+    img = Image.open('./DaisyX/stuff/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "white"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./Sophia/etc/Maghrib.ttf", 1000)
+    font = ImageFont.truetype("./DaisyX/stuff/Maghrib.ttf", 1000)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -180,13 +180,13 @@ async def lego(event):
     x = (image_widthz-w)/2
     y= ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="white", stroke_width=0, stroke_fill="white")
-    fname2 = "SophiaLogo.png"
+    fname2 = "HermioneLogo.png"
     img.save(fname2, "png")
-    await tbot.send_file(event.chat_id, fname2, caption="Made By @SophiaSLBot")
+    await tbot.send_file(event.chat_id, fname2, caption="Made By @Miss_MusicyBot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Go to Help From  @SophiaX_Support, {e}')
+   await event.reply(f'Error Go to Help From @HermioneMusic_Help, {e}')
 
 file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")

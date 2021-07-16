@@ -8,7 +8,7 @@ from pyrogram import filters
 from PIL import Image
 
 
-@pbot.on_message(filters.command("boycott") & ~filters.edited & ~filters.bot) @admins_only
+@pbot.on_message(filters.command("boycott") & ~filters.edited & ~filters.bot)
 async def boycott_kangs(client, message):
     tgi = await edit_or_reply(message, "`Applying BoyCott Magic!`")
     if not message.reply_to_message:

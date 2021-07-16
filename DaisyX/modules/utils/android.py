@@ -61,3 +61,6 @@ class GetDevice:
                 return {"name": name, "device": device, "model": model, "brand": brand}
             except KeyError:
                 return False
+            
+ __mod_name__ = "bla bla" 
+__help__ = """ <b>Hi</b> - /hi: Say Hello There """

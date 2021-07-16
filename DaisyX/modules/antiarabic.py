@@ -18,6 +18,7 @@ from typing import List
 from DaisyX import dispatcher
 from DaisyX.modules.helper_funcs.chat_status import (can_delete, user_admin,
                                                       user_not_admin)
+from DaisyX.function.pluginhelpers import admins_only
 from DaisyX.modules.helper_funcs.extraction import extract_text
 from DaisyX.modules.sql import antiarabic_sql as sql
 from DaisyX.modules.tr_engine.strings import tld

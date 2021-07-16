@@ -3,7 +3,7 @@ import os
 
 from DaisyX.services.pyrogram import pbot
 from DaisyX.function.pluginhelpers import edit_or_reply
-from DaisyX.function.pluginhelpers import import convert_to_image
+from DaisyX.function.pluginhelpers import convert_to_image
 from pyrogram import filters
 from PIL import Image
 

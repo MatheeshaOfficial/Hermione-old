@@ -1,4 +1,4 @@
-from Sophia import OWNER_ID
+from DaisyX import OWNER_ID
 from DaisyX.services.telethon import tbot 
 from DaisyX.services.events import register
 
@@ -200,4 +200,4 @@ __help__ = """
  ~ /wlogo {text} :  Create your White logo with your name
  Special Thanks To @SophiaSLBot 🤗
  """
-__mod_name__ = "Logo"
+__mod_name__ = "Logo Maker"

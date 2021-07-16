@@ -15,12 +15,12 @@
 
 from typing import List
 
-from hitsuki import dispatcher
-from hitsuki.modules.helper_funcs.chat_status import (can_delete, user_admin,
+from DaisyX import dispatcher
+from DaisyX.modules.helper_funcs.chat_status import (can_delete, user_admin,
                                                       user_not_admin)
-from hitsuki.modules.helper_funcs.extraction import extract_text
-from hitsuki.modules.sql import antiarabic_sql as sql
-from hitsuki.modules.tr_engine.strings import tld
+from DaisyX.modules.helper_funcs.extraction import extract_text
+from DaisyX.modules.sql import antiarabic_sql as sql
+from DaisyX.modules.tr_engine.strings import tld
 from telegram import Bot, ParseMode, Update
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.ext.dispatcher import run_async

@@ -43,4 +43,5 @@ async def boycott_kangs(client, message):
             
 __mod_name__ = "BoyCot Image" 
 __help__ = """ <b>BoyCot_Img</b> - Creates Boycott Image Like this 🤗
-/boycott (reply to image)"""
+/boycott (reply to image)
+Powerd By @HermioneMusic_Help"""

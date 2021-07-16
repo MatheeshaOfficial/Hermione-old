@@ -22,7 +22,7 @@ async def boycott_kangs(client, message):
         await tgi.edit("`Invalid Media!`")
         return
     background = Image.open(img).convert("RGBA")
-    foreground = Image.open("https://telegra.ph/file/82697c99d9c2313a5c295.png").convert("RGBA")
+    foreground = Image.open("staff/x-cross.png").convert("RGBA")
     x, y = foreground.size
     foreground = foreground.resize(background.size)
     background.paste(foreground, (0, 0), foreground)

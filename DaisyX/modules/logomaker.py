@@ -1,6 +1,6 @@
-from Sophia.events import register
 from Sophia import OWNER_ID
-from Sophia import telethn as tbot
+from DaisyX.services.telethon import tbot 
+from DaisyX.services.events import register
 
 import os 
 from PIL import Image, ImageDraw, ImageFont
@@ -86,7 +86,7 @@ async def lego(event):
  await event.reply('Creating your logo...')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./Sophia/etc/blackbg.jpg')
+    img = Image.open('./DaisyX/stuff/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
@@ -194,8 +194,10 @@ file_helpo = file_help.replace("_", " ")
 
 
 __help__ = """
+<b>Logo Maker</b>
  ~ /logo {text} :  Create your Red logo with your name
  ~ /ylogo {text} :  Create your Yello Logo with your name
  ~ /wlogo {text} :  Create your White logo with your name
+ Special Thanks To @SophiaSLBot 🤗
  """
-__mod_name__ = "💞Logo💞"
+__mod_name__ = "Logo"

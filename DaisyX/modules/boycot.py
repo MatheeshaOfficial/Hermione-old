@@ -1,27 +1,14 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
-#
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
-#
-# All rights reserved.
 
 import os
 
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply
-from main_startup.helper_func.plugin_helpers import convert_to_image
+from DaisyX.services.pyrogram import pbot
+from DaisyX.function.pluginhelpers import edit_or_reply
+from DaisyX.function.pluginhelpers import import convert_to_image
+from pyrogram import filters
 from PIL import Image
 
 
-@friday_on_cmd(
-    ["boycott"],
-    is_official=False,
-    cmd_help={
-        "help": "Creates Boycott Image!",
-        "example": "{ch}boycott (reply to image)",
-    },
-)
+@pbot.on_message(filters.command("boycott") & ~filters.edited & ~filters.bot) @admins_only
 async def boycott_kangs(client, message):
     tgi = await edit_or_reply(message, "`Applying BoyCott Magic!`")
     if not message.reply_to_message:
@@ -53,3 +40,7 @@ async def boycott_kangs(client, message):
     for files in (file_name, img):
         if files and os.path.exists(files):
             os.remove(files)
+            
+__mod_name__ = "BoyCot Image" 
+__help__ = """ <b>BoyCot_Img</b> - Creates Boycott Image Like this 🤗
+/boycott (reply to image)"""

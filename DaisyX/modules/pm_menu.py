@@ -28,7 +28,7 @@ from aiogram.utils.exceptions import MessageNotModified
 
 from DaisyX.decorator import register
 from DaisyX.modules.utils.disable import disableable_dec
-from DaisyX.modules.Extras import MOD_EXTRA
+from DaisyX.modules.extra import MOD_EXTRA
 
 from . import MOD_HELP
 from .language import select_lang_keyboard

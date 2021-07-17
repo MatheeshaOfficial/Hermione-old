@@ -1,42 +1,21 @@
-# Copyright (C) 2021 TeamDaisyX
+# COPYRIGHT (C) BY 𝑯𝒆𝒓𝒎𝒊𝒐𝒏𝒆 𝑶𝒇𝒇𝒊𝒄𝒊𝒂𝒍 @HermioneUpdates
+from DaisyX.services.events import register
+from DaisyX.services.telethon import tbot
 
-
-# This file is part of Daisy (Telegram Bot)
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
+TMP_DOWNLOAD_DIRECTORY = "./"
 import os
 from datetime import datetime
 
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
-from telethon import events
 
-from DaisyX.services.telethon import tbot as borg
-
+babe = "LEGENDX"
 telegraph = Telegraph()
-r = telegraph.create_account(short_name="DaisyX")
+r = telegraph.create_account(short_name=babe)
 auth_url = r["auth_url"]
 
-# Will change later
-TMP_DOWNLOAD_DIRECTORY = "./"
 
-BOTLOG = False
-
-
-@borg.on(events.NewMessage(pattern="/telegraph (media|text) ?(.*)"))
+@register(pattern="^/t(m|t) ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -45,13 +24,13 @@ async def _(event):
         start = datetime.now()
         r_message = await event.get_reply_message()
         input_str = event.pattern_match.group(1)
-        if input_str == "media":
-            downloaded_file_name = await borg.download_media(
+        if input_str == "m":
+            downloaded_file_name = await tbot.download_media(
                 r_message, TMP_DOWNLOAD_DIRECTORY
             )
             end = datetime.now()
             ms = (end - start).seconds
-            await event.reply(
+            h = await event.reply(
                 "Downloaded to {} in {} seconds.".format(downloaded_file_name, ms)
             )
             if downloaded_file_name.endswith((".webp")):
@@ -60,20 +39,20 @@ async def _(event):
                 start = datetime.now()
                 media_urls = upload_file(downloaded_file_name)
             except exceptions.TelegraphException as exc:
-                await event.edit("ERROR: " + str(exc))
+                await h.edit("ERROR: " + str(exc))
                 os.remove(downloaded_file_name)
             else:
                 end = datetime.now()
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
-                await event.reply(
-                    "Uploaded to https://telegra.ph{} in {} seconds.".format(
+                await h.edit(
+                    "Uploaded to https://telegra.ph{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒅 𝒃𝒚 @HermioneUpdates".format(
                         media_urls[0], (ms + ms_two)
                     ),
                     link_preview=True,
                 )
-        elif input_str == "text":
-            user_object = await borg.get_entity(r_message.sender_id)
+        elif input_str == "t":
+            user_object = await tbot.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name  # + " " + user_object.last_name
             # apparently, all Users do not have last_name field
             if optional_title:
@@ -82,7 +61,7 @@ async def _(event):
             if r_message.media:
                 if page_content != "":
                     title_of_page = page_content
-                downloaded_file_name = await borg.download_media(
+                downloaded_file_name = await tbot.download_media(
                     r_message, TMP_DOWNLOAD_DIRECTORY
                 )
                 m_list = None
@@ -96,13 +75,13 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).seconds
             await event.reply(
-                "Pasted to https://telegra.ph/{} in {} seconds.".format(
+                "Pasted to https://telegra.ph/{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 @HermioneUpdates".format(
                     response["path"], ms
                 ),
                 link_preview=True,
             )
     else:
-        await event.reply("Reply to a message to get a permanent telegra.ph link. ")
+        await event.reply("Reply to a message to get a permanent telegra.ph link.")
 
 
 def resize_image(image):
@@ -110,10 +89,14 @@ def resize_image(image):
     im.save(image, "PNG")
 
 
-__mod_name__ = """
-<b> Telegraph text/video upload plugin </b>
- - /telegraph media <i>reply to image or video<i> : Upload image and video directly to telegraph.
- - /telegraph text <i>reply to text</i> : upload text directly to telegraph .
+file_help = os.path.basename(__file__)
+file_help = file_help.replace(".py", "")
+file_helpo = file_help.replace("_", " ")
+
+__help__ = """
+ - /tm : Get Telegraph Link Of Replied Media
+ - /tt: Get Telegraph Link of Replied Text
+ - 𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
 """
 
 __mod_name__ = "Telegraph"

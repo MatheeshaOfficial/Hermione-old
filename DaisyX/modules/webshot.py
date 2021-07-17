@@ -4,12 +4,10 @@
 
 from pyrogram import filters
 
-from DaisyX.function.pluginhelpers import admins_only
 from DaisyX.services.pyrogram import pbot as app
 
 
 @app.on_message(filters.command("webss") & ~filters.private & ~filters.edited)
-@admins_only
 async def take_ss(_, message):
     if len(message.command) != 2:
         await message.reply_text("Give A Url To Fetch Screenshot.")

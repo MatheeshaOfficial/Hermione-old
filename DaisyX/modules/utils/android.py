@@ -61,3 +61,5 @@ class GetDevice:
                 return {"name": name, "device": device, "model": model, "brand": brand}
             except KeyError:
                 return False
+            
+ 

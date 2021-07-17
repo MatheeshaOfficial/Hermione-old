@@ -28,6 +28,7 @@ from aiogram.utils.exceptions import MessageNotModified
 
 from DaisyX.decorator import register
 from DaisyX.modules.utils.disable import disableable_dec
+from DaisyX.modules.Extras import MOD_EXTRA
 
 from . import MOD_HELP
 from .language import select_lang_keyboard
@@ -117,7 +118,8 @@ async def get_start_func(message, strings, edit=False):
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
     button = help_markup(MOD_HELP)
-    button.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
+    buttons.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
+    buttons.add(InlineKeyboardButton(text="Extras",url="https://t.me/percy_jackson_4"))
     with suppress(MessageNotModified):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
 

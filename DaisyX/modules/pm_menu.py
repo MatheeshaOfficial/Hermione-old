@@ -198,11 +198,11 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
 @register(helpmenu_cb.filter(), f="cb", allow_kwargs=True)
 async def helpmenu_callback(query, callback_data=None, **kwargs):
     mod = callback_data["mod"]
-    if not mod in ALL_MODULES:
+    if not mod in MOD_EXTRA:
         await query.answer()
         return
     msg = f"Help for <b>{mod}</b> module:\n"
-    msg += f"{ALL_MODULES[mod]}"
+    msg += f"{MOD_EXTRA[mod]}"
     button = InlineKeyboardMarkup().add(
         InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
     )

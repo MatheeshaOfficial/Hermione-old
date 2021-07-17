@@ -5,11 +5,11 @@ import sys
 from DaisyX.utils.logger import log
  
 LOADED_MODULES = []
-MOD_HELP = {}
+MOD_Extras = {}
  
  
 def list_all_modules() -> list:
-    modules_directory = "DaisyX/modules"
+    modules_directory = "DaisyX/modules/Extras"
  
     all_modules = []
     for module_name in os.listdir(modules_directory):

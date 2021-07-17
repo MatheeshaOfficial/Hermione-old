@@ -118,8 +118,8 @@ async def get_start_func(message, strings, edit=False):
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
     button = help_markup(MOD_HELP)
-    buttons.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
-    buttons.add(InlineKeyboardButton(text="Extras",url="https://t.me/percy_jackson_4"))
+    button.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
+    button.add(InlineKeyboardButton(text="Extras",url="https://t.me/percy_jackson_4"))
     with suppress(MessageNotModified):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
 
@@ -147,6 +147,7 @@ async def back_btn(event):
 async def help_cmd(message, strings):
     button = help_markup(MOD_HELP)
     button.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
+    button.add(InlineKeyboardButton(text="Extras",url="https://t.me/percy_jackson_4"))
     await message.reply(strings["help_header"], reply_markup=button)
 
 

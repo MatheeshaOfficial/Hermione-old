@@ -127,7 +127,7 @@ async def help_cb(event, strings):
 @register(regexp="get_extras", f="cb")
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
-    button = help_markup(MOD_EXTRA)
+    button = help_markup(ALL_MODULES)
     button.add(InlineKeyboardButton(strings["back"], callback_data="get_help"))
     with suppress(MessageNotModified):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
@@ -198,11 +198,11 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
 @register(helpmenu_cb.filter(), f="cb", allow_kwargs=True)
 async def helpmenu_callback(query, callback_data=None, **kwargs):
     mod = callback_data["mod"]
-    if not mod in MOD_EXTRA:
+    if not mod in ALL_MODULES:
         await query.answer()
         return
     msg = f"Help for <b>{mod}</b> module:\n"
-    msg += f"{MOD_EXTRA[mod]}"
+    msg += f"{ALL_MODULES[mod]}"
     button = InlineKeyboardMarkup().add(
         InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
     )

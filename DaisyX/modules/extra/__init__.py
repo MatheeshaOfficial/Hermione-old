@@ -9,7 +9,7 @@ MOD_EXTRA = {}
  
  
 def list_all_modules() -> list:
-    modules_directory = "DaisyX/modules/extras"
+    modules_directory = "DaisyX/modules/extra"
  
     all_modules = []
     for module_name in os.listdir(modules_directory):

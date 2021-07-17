@@ -29,6 +29,7 @@ from aiogram.utils.exceptions import MessageNotModified
 from DaisyX.decorator import register
 from DaisyX.modules.utils.disable import disableable_dec
 from DaisyX.modules.extra import MOD_EXTRA
+from DaisyX.modules.extra import ALL_MODULES
 
 from . import MOD_HELP
 from .language import select_lang_keyboard
@@ -201,7 +202,7 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
         await query.answer()
         return
     msg = f"Help for <b>{mod}</b> module:\n"
-    msg += f"{MOD_HELP[mod]}"
+    msg += f"{MOD_EXTRA[mod]}"
     button = InlineKeyboardMarkup().add(
         InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
     )

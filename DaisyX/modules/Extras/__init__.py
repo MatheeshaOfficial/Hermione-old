@@ -5,7 +5,7 @@ import sys
 from DaisyX.utils.logger import log
  
 LOADED_MODULES = []
-MOD_Extras = {}
+MOD_EXTRA = {}
  
  
 def list_all_modules() -> list:

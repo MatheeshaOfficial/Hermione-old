@@ -193,3 +193,20 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
             msg, disable_web_page_preview=True, reply_markup=button
         )
         await query.answer("Help for " + mod)
+
+@register(helpmenu_cb.filter(), f="cb", allow_kwargs=True)
+async def helpmenu_callback(query, callback_data=None, **kwargs):
+    mod = callback_data["mod"]
+    if not mod in MOD_EXTRA:
+        await query.answer()
+        return
+    msg = f"Help for <b>{mod}</b> module:\n"
+    msg += f"{MOD_HELP[mod]}"
+    button = InlineKeyboardMarkup().add(
+        InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
+    )
+    with suppress(MessageNotModified):
+        await query.message.edit_text(
+            msg, disable_web_page_preview=True, reply_markup=button
+        )
+        await query.answer("Help for " + mod)

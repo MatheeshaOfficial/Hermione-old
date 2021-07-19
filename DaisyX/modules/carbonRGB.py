@@ -19,7 +19,7 @@ import random
 
 # @register(filters.command("rgbcarbon")& ...)
 
-@register(pattern="^/rgbcarbon$")
+@tbot.on(events.NewMessage(pattern="/rgbcarbon (.*)"))
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)
@@ -61,7 +61,7 @@ async def carbon_api(e):
 
  if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
    """ A Wrapper for carbon.now.sh """
-   await e.edit("⬜⬜⬜⬜⬜")
+   await e.edit("⚪⚪⚪⚪⚪")
    CARBON = 'https://carbon.now.sh/?bg=rgba({R}%2C{G}%2C.{B}%2C1)&t={T}&wt=none&l=auto&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code={code}'
    CARBONLANG = "en"
    textx = await e.get_reply_message()

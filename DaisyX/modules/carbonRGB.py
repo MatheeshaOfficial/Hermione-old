@@ -3,9 +3,8 @@
 # All Rights Reserved @Miss_MusicyBot ©2020-2021
 
 # Thanks to  for THIS PLUGIN
-
-from DaisyX.function.pluginhelpers import admins_only
-from DaisyX.services.pyrogram import pbot
+from DaisyX.services.telethon import tbot
+from DaisyX.services.events import register
 from pyrogram import filters
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
@@ -20,8 +19,7 @@ import random
 
 # @register(filters.command("rgbcarbon")& ...)
 
-@pbot.on_message(filters.command("rgbcarbon") & ~filters.edited & ~filters.bot)
-@admins_only
+@register(pattern="^/rgbcarbon$")
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)

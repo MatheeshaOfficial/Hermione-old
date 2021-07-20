@@ -114,7 +114,7 @@ Anything missing kindly let us know at [Daisy Support](https://t.me/DaisySupport
 
 ## Devs & Contributors
 
-#### • PercyOfficial  »»  <a href="https://github.com/PercyOfficial" alt="PercyOfficial"> <img src="https://img.shields.io/badge/Percy-90302f?logo=github" /></a> (OWNER)
+#### • PercyOfficial  »»  <a href="https://github.com/PercyOfficial" alt="PercyOfficial"> <img src="https://img.shields.io/badge/PercyOfficial-90302f?logo=github" /></a> (OWNER)
 #### • LUCIFER_MORNINGSTAR    »»  <a href="https://github.com/lucifeermorningstar" alt="lucifeermorningstar"> <img src="https://img.shields.io/badge/lucifeermorningstar- 30302f ?logo=github" /></a> (DEV)
 #### • INUKA ASITH    »»  <a href="https://github.com/InukaAsith" alt="InukaAsith"> <img src="https://img.shields.io/badge/InukaAsith-107D8D?logo=github" /></a> (DEV)
 #### • ROSELOVERX  »»  <a href="https://github.com/Amarnathcdj" alt="RoseLoverX"> <img src="https://img.shields.io/badge/RoseLoverX-82CAFA?logo=github" /></a> (DEV)

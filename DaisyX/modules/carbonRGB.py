@@ -17,7 +17,6 @@ import asyncio
 import os
 import random
 
-# @register(filters.command("rgbcarbon")& ...)
 
 @register(pattern="^/rgbcarbon (.*)")
 async def carbon_api(e):

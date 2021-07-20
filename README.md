@@ -124,7 +124,7 @@ Anything missing kindly let us know at [Daisy Support](https://t.me/DaisySupport
 #### • Annihilatorrrr   »»  <a href="https://github.com/annihilatorrrr" alt="annihilatorrrr"> <img src="https://img.shields.io/badge/annihilatorrrr-E9E1E9?logo=github" /></a>
 #### • PercyOfficial  »»  <a href="https://github.com/PercyOfficial" alt="PercyOfficial"> <img src="https://img.shields.io/badge/Percy-92CALA?logo=github" /></a>
 #### • Damantha_Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha126"> <img src="https://img.shields.io/badge/Damantha126-30302f?logo=github" /></a>
-
+#### • Sadew Jayasekara  »»  <a href="https://github.com/sadew451" alt="sadew451"> <img src="https://img.shields.io/badge/sadew451-30302f?logo=github" /></a>
 
 ## All who helped at a glance 
 

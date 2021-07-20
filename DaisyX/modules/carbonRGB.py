@@ -19,7 +19,7 @@ import random
 
 # @register(filters.command("rgbcarbon")& ...)
 
-@register(pattern="^/rgbcarbon$")
+@register(pattern="^/rgbcarbon (.*)")
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)

@@ -3,7 +3,7 @@
 # All Rights Reserved @Miss_MusicyBot ©2020-2021
 
 # Thanks to  for THIS PLUGIN
-from DaisyX.services.telethon import tbot
+from DaisyX.services.telethon import tbot as e
 from DaisyX.services.events import register
 from pyrogram import filters
 from selenium.webdriver.support.ui import Select

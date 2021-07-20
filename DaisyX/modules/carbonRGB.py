@@ -18,7 +18,7 @@ import os
 import random
 
 
-@register(pattern="^/rgbcarbon (.*)")
+@register(pattern="^/rgb (.*)")
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)

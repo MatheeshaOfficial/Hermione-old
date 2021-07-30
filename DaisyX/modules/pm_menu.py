@@ -92,10 +92,10 @@ async def get_start_func(message, strings, edit=False):
     )
     buttons.add(
         InlineKeyboardButton(
-            strings["btn_channel"], url="https://t.me/HermioneUpdates"
+            strings["btn_channel"], url="https://t.me/Cortana_Updates"
         ),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/HermioneMusic_Help"
+            strings["btn_group"], url="https://t.me/Cortana_BOTS"
         ),
     )
     buttons.add(

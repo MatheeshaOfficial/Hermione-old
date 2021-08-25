@@ -17,25 +17,18 @@
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 
-> ⭐️ Thanks to everyone who starred Daisy, That is the greatest pleasure we have !
+> ⭐️ Thanks to everyone who starred HermioneX, That is the greatest pleasure we have !
 
-### https://daisyproject.studio
 ## Avaiilable on Telegram as [@Miss_MusicyBot](https://t.me/miss_musicybot)
 
 # 🧙‍♀️ Deploy Guide
-Complete guide on deploying @DaisyXBot's clone on Heroku.
-
-[![Tutorial](https://yt-embed.herokuapp.com/embed?v=yar61k_hEHQ)](https://www.youtube.com/watch?v=yar61k_hEHQ)
-
-☆ Video by [ANJANA MADUSHANKA](https://www.youtube.com/channel/UCApXYZNiMdW6UG48-syX7wQ) ☆
-
+Complete guide on deploying @Miss_MusicyBot's clone on Heroku.
 
 # 🏃‍♂️ Easy Deploy 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PercyOfficial/Hermione)
 
 [Generate String Session](https://replit.com/@SpEcHiDe/GenerateStringSession)  << Select telethon
 
-<a href="https://www.youtube.com/watch?v=yar61k_hEHQ"><img src="https://img.shields.io/badge/How%20To-Deploy-red.svg?logo=Youtube"></a>
 
 # ❤️ Support
 <a href="https://t.me/HermioneMusic_Help"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
@@ -114,9 +107,8 @@ Anything missing kindly let us know at [Daisy Support](https://t.me/DaisySupport
 
 ## Devs & Contributors
 
-![GitHub Contributors Image](https://contrib.rocks/image?repo=PercyOfficial/Hermione)
-
 #### • PercyOfficial  »»  <a href="https://github.com/PercyOfficial" alt="PercyOfficial"> <img src="https://img.shields.io/badge/PercyOfficial-90302f?logo=github" /></a> (OWNER)
+#### • Damantha_Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha126"> <img src="https://img.shields.io/badge/Damantha126-af3ac6?logo=github" /></a> (DEV)
 #### • LUCIFER_MORNINGSTAR    »»  <a href="https://github.com/lucifeermorningstar" alt="lucifeermorningstar"> <img src="https://img.shields.io/badge/lucifeermorningstar- 30302f ?logo=github" /></a> (DEV)
 #### • INUKA ASITH    »»  <a href="https://github.com/InukaAsith" alt="InukaAsith"> <img src="https://img.shields.io/badge/InukaAsith-107D8D?logo=github" /></a> (DEV)
 #### • ROSELOVERX  »»  <a href="https://github.com/Amarnathcdj" alt="RoseLoverX"> <img src="https://img.shields.io/badge/RoseLoverX-82CAFA?logo=github" /></a> (DEV)
@@ -125,14 +117,13 @@ Anything missing kindly let us know at [Daisy Support](https://t.me/DaisySupport
 #### • DARK PRINCE »»  <a href="https://github.com/Mr-Dark-Prince" alt="DarkPrince"> <img src="https://img.shields.io/badge/DarkPrince-95B9C7?logo=github" /></a>
 #### • OFFICIAL_BAWWA    »»  <a href="https://github.com/Official_Bawwa" alt="Official_Bawwa"> <img src="https://img.shields.io/badge/Official_Bawwa-90302f?logo=github" /></a>
 #### • Annihilatorrrr   »»  <a href="https://github.com/annihilatorrrr" alt="annihilatorrrr"> <img src="https://img.shields.io/badge/annihilatorrrr-E9E1E9?logo=github" /></a>
-#### • Damantha_Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha126"> <img src="https://img.shields.io/badge/Damantha126-30302f?logo=github" /></a>
 #### • Sadew Jayasekara  »»  <a href="https://github.com/sadew451" alt="sadew451"> <img src="https://img.shields.io/badge/sadew451-30302f?logo=github" /></a>
 
 ## All who helped at a glance 
 
 > This project exists thanks to these awesome developers and their codes and contributions.
 
-<a href="https://github.com/TeamDaisyX/DaisyX/graphs/contributors"><img src="https://opencollective.com/teamdaisyxdaisy/contributors.svg?width=890&button=false" /></a>
+![GitHub Contributors Image](https://contrib.rocks/image?repo=PercyOfficial/Hermione)
 
 > And credits goes to all who supported, all who helped and API & environmental equirement package devs and all projects helped in making this project.
 > Special thanks to you for using bot

@@ -76,7 +76,7 @@ async def _(event):
         res = get(server)
         if "Wolfram Alpha did not understand" in res.text:
             await event.reply(
-                "Sorry, Daisy's AI systems could't recognized your question.."
+                "Sorry, Hermione's AI systems could't recognized your question.."
             )
             return
         await event.reply(f"**{i}**\n\n" + res.text, parse_mode="markdown")
@@ -117,7 +117,7 @@ async def _(event):
 
                     if "Wolfram Alpha did not understand" in res:
                         answer = (
-                            "I'm sorry Daisy's AI system can't undestand your problem"
+                            "I'm sorry Hermione's AI system can't undestand your problem"
                         )
                     else:
                         answer = res.text

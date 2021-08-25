@@ -28,7 +28,7 @@ from pyrogram import filters
 from DaisyX import BOT_ID
 from DaisyX.db.mongo_helpers.aichat import add_chat, get_session, remove_chat
 from DaisyX.function.pluginhelpers import admins_only, edit_or_reply
-from DaisyX.services.pyrogram import pbot as daisyx
+from DaisyX.services.pyrogram import pbot as hermione
 
 translator = google_translator()
 
@@ -42,10 +42,10 @@ en_chats = []
 # AI Chat (C) 2020-2021 by @InukaAsith
 
 
-@daisyx.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot)
+@hermione.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot)
 @admins_only
 async def hmm(_, message):
-    global daisy_chats
+    global hermione_chats
     if len(message.command) != 2:
         await message.reply_text(
             "I only recognize `/chatbot on` and /chatbot `off only`"
@@ -57,7 +57,7 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Daisy AI Already Activated In This Chat")
+            await lel.edit("Hermione AI Already Activated In This Chat")
             return
         await lel.edit(
             f"Hermione AI Successfully Added For Users In The Chat {message.chat.id}"
@@ -67,7 +67,7 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("Daisy AI Was Not Activated In This Chat")
+            await lel.edit("Hermione AI Was Not Activated In This Chat")
             return
         await lel.edit(
             f"Hermione AI Successfully Deactivated For Users In The Chat {message.chat.id}"
@@ -86,7 +86,7 @@ async def hmm(_, message):
         )
 
 
-@daisyx.on_message(
+@hermione.on_message(
     filters.text & filters.reply & ~filters.bot & ~filters.via_bot & ~filters.forwarded,
     group=2,
 )
@@ -101,8 +101,8 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("daisy", "Aco")
-        test = test.replace("Daisy", "Aco")
+        test = test.replace("hermione", "Aco")
+        test = test.replace("Hermione", "Aco")
         querystring = {
             "bid": "155752",
             "key": "MMtvNMsssIColXkn",
@@ -117,12 +117,12 @@ async def hmm(client, message):
         result = response.text
         result = result.replace('{"cnt":"', "")
         result = result.replace('"}', "")
-        result = result.replace("Aco", "Daisy")
+        result = result.replace("Aco", "Hermione")
         result = result.replace("<a href=\\", "<a href =")
         result = result.replace("<\/a>", "</a>")
         pro = result
         try:
-            await daisyx.send_chat_action(message.chat.id, "typing")
+            await hermione.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError as e:
             print(e)
@@ -163,8 +163,8 @@ async def hmm(client, message):
         # test = emoji.demojize(test.strip())
 
         # Kang with the credits bitches @InukaASiTH
-        test = test.replace("daisy", "Aco")
-        test = test.replace("Daisy", "Aco")
+        test = test.replace("hermione", "Aco")
+        test = test.replace("Hermione", "Aco")
         querystring = {
             "bid": "155752",
             "key": "MMtvNMsssIColXkn",
@@ -179,20 +179,20 @@ async def hmm(client, message):
         result = response.text
         result = result.replace('{"cnt":"', "")
         result = result.replace('"}', "")
-        result = result.replace("Aco", "Daisy")
+        result = result.replace("Aco", "Hermione")
         result = result.replace("<a href=\\", "<a href =")
         result = result.replace("<\/a>", "</a>")
         pro = result
         if not "en" in lan and not lan == "":
             pro = translator.translate(pro, lang_tgt=lan[0])
         try:
-            await daisyx.send_chat_action(message.chat.id, "typing")
+            await hermione.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError as e:
             print(e)
 
 
-@daisyx.on_message(filters.text & filters.private & filters.reply & ~filters.bot)
+@hermione.on_message(filters.text & filters.private & filters.reply & ~filters.bot)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
@@ -233,8 +233,8 @@ async def inuka(client, message):
     # test = emoji.demojize(test.strip())
 
     # Kang with the credits bitches @InukaASiTH
-    test = test.replace("daisy", "Aco")
-    test = test.replace("Daisy", "Aco")
+    test = test.replace("hermione", "Aco")
+    test = test.replace("Hermione", "Aco")
     querystring = {
         "bid": "155752",
         "key": "MMtvNMsssIColXkn",
@@ -256,14 +256,14 @@ async def inuka(client, message):
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await daisyx.send_chat_action(message.chat.id, "typing")
+        await hermione.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError as e:
         print(e)
 
 
-@daisyx.on_message(
-    filters.regex("Daisy|daisy|DaisyX|daisyx|Daisyx")
+@hermione.on_message(
+    filters.regex("Hermione|hermione|HermionE|hermionebot|Hermionebot")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -310,8 +310,8 @@ async def inuka(client, message):
     # test = emoji.demojize(test.strip())
 
     # Kang with the credits bitches @InukaASiTH
-    test = test.replace("daisy", "Aco")
-    test = test.replace("Daisy", "Aco")
+    test = test.replace("hermione", "Aco")
+    test = test.replace("Hermione", "Aco")
     querystring = {
         "bid": "155752",
         "key": "MMtvNMsssIColXkn",
@@ -326,14 +326,14 @@ async def inuka(client, message):
     result = response.text
     result = result.replace('{"cnt":"', "")
     result = result.replace('"}', "")
-    result = result.replace("Aco", "Daisy")
+    result = result.replace("Aco", "hermione")
     result = result.replace("<a href=\\", "<a href =")
     result = result.replace("<\/a>", "</a>")
     pro = result
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await daisyx.send_chat_action(message.chat.id, "typing")
+        await hermione.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError as e:
         print(e)
@@ -341,7 +341,7 @@ async def inuka(client, message):
 
 __help__ = """
 <b> Chatbot </b>
-DAISY AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+Hermione AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
  - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
  - /chatbot EN : Enables English only chatbot
  

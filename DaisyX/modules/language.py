@@ -167,12 +167,12 @@ async def __import__(chat_id, data):
 __mod_name__ = "Languages"
 
 __help__ = """
-This module is dedicated towards utlising Daisy's localization feature! You can also <a href='https://crowdin.com/project/DaisyXx'>contribute</a> for improving localization in Daisy!
+This module is dedicated towards utlising Hermione's localization feature! You can also <a href='https://crowdin.com/project/DaisyXx'>contribute</a> for improving localization in Hermione!
 
 <b>Available commands:</b>
 - /lang: Shows a list of avaible languages
 - /lang (language codename): Sets a language
 
 <b>Example:</b> <code>/lang</code>
-Daisy will send you bunch of inline buttons where you can select your prefered language interatively without any hassles!
+Hermione will send you bunch of inline buttons where you can select your prefered language interatively without any hassles!
 """

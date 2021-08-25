@@ -110,7 +110,7 @@ async def hi(client, message):
             sender = message.from_user.mention()
             lol = await client.send_message(
                 message.chat.id,
-                f"{sender}, Your message was deleted as it contain a link(s). \n ❗️ Links are not allowed here",
+                f"{sender}, Your message was deleted as it contain a link(s). \n 🛑 Links are not allowed here",
             )
             await asyncio.sleep(10)
             await lol.delete()

@@ -198,6 +198,5 @@ __help__ = """
  ~ /logo {text} :  Create your Red logo with your name
  ~ /ylogo {text} :  Create your Yello Logo with your name
  ~ /wlogo {text} :  Create your White logo with your name
- Special Thanks To @SophiaSLBot 🤗
  """
 __mod_name__ = "Logo Maker"

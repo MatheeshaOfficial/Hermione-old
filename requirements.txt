@@ -122,4 +122,3 @@ pygithub
 #states 
 psutil
 
-gogoanimeapi

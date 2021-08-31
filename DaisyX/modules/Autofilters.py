@@ -19,7 +19,7 @@
 __mod_name__ = "Auto Filters"
 __help__ = """
 <b> AUTO FILTERS </b>
-Daisy Can filter content of a given channel automatically
+Hermione Can filter content of a given channel automatically
 Currently support:
      - Videos
      - Media

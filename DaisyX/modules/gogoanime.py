@@ -41,15 +41,10 @@ async def search(event):
     buttons = Button.inline("Download", data="episode_{}".format(nfo))
     text = """
 {} (Released: {})
-
 Type: {}
-
 Status: {}
-
 Generies: {}
-
 Episodes: {}
-
 Summary: {}
 """
     await event.edit(

@@ -18,7 +18,6 @@ cryptg
 cryptography
 
 # Other
-tzlocal==3.0
 jikanpy
 envparse
 hypercorn
@@ -40,6 +39,7 @@ httpx[http2]
 wikipedia
 coffeehouse
 PyDictionary==2.0.1
+git+https://github.com/starry69/python-markdown2.git
 google-trans-new==1.1.9
 hachoir
 telegraph
@@ -87,7 +87,7 @@ wget
 asyncio
 
 #Markup
-Markdown>=3.3.4
+
 
 #profanity (Credits to Julia)
 better_profanity

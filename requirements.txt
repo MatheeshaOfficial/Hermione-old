@@ -87,7 +87,7 @@ wget
 asyncio
 
 #Markup
-
+Markdown>=3.3.4
 
 #profanity (Credits to Julia)
 better_profanity

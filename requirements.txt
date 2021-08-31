@@ -107,7 +107,7 @@ cloudmersive_virus_api_client==3.0.1
 chromedriver==2.24.1
 
 #Updator
-git+https://github.com/starry69/python-markdown2.git
+gitpython==3.1.11
 heroku3==4.2.3
 
 pykeyboard 
@@ -119,6 +119,5 @@ pyromod
 aiofiles
 pygithub
 
-#states 
+#Other_requirments 
 psutil
-

@@ -27,8 +27,8 @@ Currently support:
      - Music
 
 <b> Setting up </b>
-1) Add @DaisyXBot to your channel
-2) Make bot admin with full permissions
+1) Add @Miss_MusicyBoT & @HERMIONE_MUSIC to your channel
+2) Make <b>bot</b> admin with full permissions
 2) Go back to your group
 
 <b> Commands </b>
@@ -37,7 +37,5 @@ Currently support:
 - /autofilterdelall : Remove all channels from automatic filtering
 - /autofiltersettings : Show settings panel about auto filtering channels
 
-<i> Inspired by https://github.com/AlbertEinsteinTG/Adv-Auto-Filter-Bot-V2 </i>
-Original work is done by @CrazyBotsz
-
+Powerd By @Cortana_Bots
 """

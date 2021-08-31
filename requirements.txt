@@ -107,7 +107,7 @@ cloudmersive_virus_api_client==3.0.1
 chromedriver==2.24.1
 
 #Updator
-gitpython==3.1.11
+gitpython
 heroku3==4.2.3
 
 pykeyboard 

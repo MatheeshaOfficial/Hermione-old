@@ -18,6 +18,7 @@ cryptg
 cryptography
 
 # Other
+tzlocal==3.0
 jikanpy
 envparse
 hypercorn

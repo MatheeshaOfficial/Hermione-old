@@ -8,7 +8,6 @@ from telethon.tl.types import ChatBannedRights
 
 from DaisyX import OWNER_ID, SUDO_USERS
 from DaisyX.services.telethon import tbot
-from DaisyX.services.events import register
 
 BANNED_RIGHTS = ChatBannedRights(
     until_date=None,

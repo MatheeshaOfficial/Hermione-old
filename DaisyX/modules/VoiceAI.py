@@ -18,7 +18,7 @@ async def fetch(url):
 
 
 async def ai_lycia(url):
-    ai_name ="hermione.mp3"
+    ai_name = "hermione.mp3"
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
             if resp.status == 200:

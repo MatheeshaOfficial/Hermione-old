@@ -188,6 +188,7 @@ async def edit_or_reply(message, text, parse_mode="md"):
         return await message.reply_text(text, parse_mode=parse_mode)
     return await message.edit(text, parse_mode=parse_mode)
 
+
 async def edit_or_send_as_file(
     text: str,
     message: Message,
@@ -211,6 +212,7 @@ async def edit_or_send_as_file(
         return
     else:
         return await message.edit(text, parse_mode=parse_mode)
+
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     """run command in terminal"""
@@ -261,7 +263,6 @@ async def convert_to_image(message, client) -> [None, str]:
         vid_path = await client.download_media(message.reply_to_message)
         await runcmd(f"ffmpeg -i {vid_path} -filter:v scale=500:500 -an {final_path}")
     return final_path
-
 
 
 def get_text(message: Message) -> [None, str]:

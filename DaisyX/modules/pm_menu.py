@@ -1,7 +1,7 @@
 # Copyright (C) 2018 - 2020 MrYacha. All rights reserved. Source code available under the AGPL.
 # Copyright (C) 2021 TeamDaisyX
 # Copyright (C) 2020 Inuka Asith
-#hermione
+# hermione
 # This file is part of Daisy (Telegram Bot)
 
 # This program is free software: you can redistribute it and/or modify
@@ -19,23 +19,22 @@
 
 import random
 from contextlib import suppress
-from DaisyX.services.pyrogram import pbot
-from pyrogram import filters
 
 from aiogram.types.inline_keyboard import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.callback_data import CallbackData
 from aiogram.utils.exceptions import MessageNotModified
+from pyrogram import filters
 
 from DaisyX.decorator import register
-from DaisyX.modules.utils.disable import disableable_dec
 from DaisyX.modules.extra import MOD_EXTRA
-from DaisyX.modules.extra import ALL_MODULES
+from DaisyX.modules.states import bot_sys_stats
+from DaisyX.modules.utils.disable import disableable_dec
+from DaisyX.services.pyrogram import pbot
 
 from . import MOD_HELP
 from .language import select_lang_keyboard
 from .utils.disable import disableable_dec
 from .utils.language import get_strings_dec
-from DaisyX.modules.states import bot_sys_stats
 
 helpmenu_cb = CallbackData("helpmenu", "mod")
 
@@ -99,9 +98,7 @@ async def get_start_func(message, strings, edit=False):
         ),
     )
     buttons.add(
-        InlineKeyboardButton(
-            text="System Stats 💻", callback_data="stats_callback"
-        ),
+        InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
     )
     buttons.add(
         InlineKeyboardButton(
@@ -123,6 +120,7 @@ async def help_cb(event, strings):
     with suppress(MessageNotModified):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
 
+
 @register(regexp="get_extras", f="cb")
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
@@ -132,18 +130,15 @@ async def help_cb(event, strings):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
 
 
-
-
 @register(regexp="lang_btn", f="cb")
 async def set_lang_cb(event):
     await select_lang_keyboard(event.message, edit=True)
 
+
 @pbot.on_callback_query(filters.regex("stats_callback"))
 async def stats_callback(_, CallbackQuery):
     text = await bot_sys_stats()
-    await pbot.answer_callback_query(
-        CallbackQuery.id, text, show_alert=True
-    )
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
 
 
 @register(regexp="go_to_start", f="cb")
@@ -158,7 +153,6 @@ async def help_cmd(message, strings):
     button = help_markup(MOD_HELP)
     button.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
     await message.reply(strings["help_header"], reply_markup=button)
-
 
 
 @register(cmds="help", only_groups=True)
@@ -192,6 +186,7 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
             msg, disable_web_page_preview=True, reply_markup=button
         )
         await query.answer("Help for " + mod)
+
 
 @register(helpmenu_cb.filter(), f="cb", allow_kwargs=True)
 async def helpmenu_callback(query, callback_data=None, **kwargs):

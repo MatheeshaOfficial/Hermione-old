@@ -1,6 +1,6 @@
-#Dihan Official 2021
+# Dihan Official 2021
 
-from Sophia import DEV_USERS, DRAGONS, DEMONS
+from Sophia import DEMONS, DEV_USERS, DRAGONS
 from telegram import Message
 from telegram.ext import BaseFilter
 

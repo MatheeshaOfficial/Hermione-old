@@ -10,12 +10,12 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
- 
- 
+
+
 import asyncio
 import os
 import re
- 
+
 import better_profanity
 import emoji
 import nude
@@ -24,9 +24,9 @@ from better_profanity import profanity
 from google_trans_new import google_translator
 from telethon import events
 from telethon.tl.types import ChatBannedRights
- 
+
 from DaisyX import BOT_ID
- 
+
 # from DaisyX.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
 from DaisyX.function.telethonbasics import is_admin
 from DaisyX.services.events import register
@@ -38,11 +38,11 @@ from DaisyX.services.sql.nsfw_watch_sql import (
     rmnsfwatch,
 )
 from DaisyX.services.telethon import tbot
- 
+
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
- 
- 
+
+
 async def is_nsfw(event):
     lmao = event
     if not (
@@ -66,7 +66,7 @@ async def is_nsfw(event):
             return False
     img = starkstark
     f = {"file": (img, open(img, "rb"))}
- 
+
     r = requests.post("https://starkapi.herokuapp.com/nsfw/", files=f).json()
     if r.get("success") is False:
         is_nsfw = False
@@ -75,8 +75,8 @@ async def is_nsfw(event):
     elif r.get("is_nsfw") is False:
         is_nsfw = False
     return is_nsfw
- 
- 
+
+
 @tbot.on(events.NewMessage(pattern="/nsfwguardian (.*)"))
 async def nsfw_watch(event):
     if not event.is_group:
@@ -120,8 +120,8 @@ async def nsfw_watch(event):
     else:
         await event.reply("`You Should Be Admin To Do This!`")
         return
- 
- 
+
+
 @tbot.on(events.NewMessage())
 async def ws(event):
     warner_starkz = get_all_nsfw_enabled_chat()
@@ -156,8 +156,8 @@ async def ws(event):
         await asyncio.sleep(30)
         await dev.delete()
         os.remove("nudes.jpg")
- 
- 
+
+
 """
  
 @pbot.on_message(filters.command("nsfwguardian") & ~filters.edited & ~filters.bot)
@@ -222,21 +222,21 @@ async def nsfw_watch(client, message):
  
  
 """
- 
- 
+
+
 # This Module is ported from https://github.com/MissJuliaRobot/MissJuliaRobot
 # This hardwork was completely done by MissJuliaRobot
 # Full Credits goes to MissJuliaRobot
- 
- 
+
+
 approved_users = db.approve
 spammers = db.spammer
 globalchat = db.globchat
- 
+
 CMD_STARTERS = "/"
 profanity.load_censor_words_from_file("./profanity_wordlist.txt")
- 
- 
+
+
 @register(pattern="^/profanity(?: |$)(.*)")
 async def profanity(event):
     if event.fwd_from:
@@ -288,8 +288,8 @@ async def profanity(event):
     else:
         await event.reply("`You Should Be Admin To Do This!`")
         return
- 
- 
+
+
 @register(pattern="^/globalmode(?: |$)(.*)")
 async def profanity(event):
     if event.fwd_from:
@@ -302,7 +302,7 @@ async def profanity(event):
         await event.reply("`I Should Be Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
- 
+
         input = event.pattern_match.group(1)
         chats = globalchat.find({})
         if not input:
@@ -342,8 +342,8 @@ async def profanity(event):
     else:
         await event.reply("`You Should Be Admin To Do This!`")
         return
- 
- 
+
+
 @tbot.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
     if event.is_private:
@@ -380,12 +380,12 @@ async def del_profanity(event):
                     await asyncio.sleep(10)
                     await dev.delete()
                     os.remove("nudes.jpg")
- 
- 
+
+
 def extract_emojis(s):
     return "".join(c for c in s if c in emoji.UNICODE_EMOJI)
- 
- 
+
+
 @tbot.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
     if event.is_private:
@@ -434,10 +434,10 @@ async def del_profanity(event):
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
- 
- 
+
+
 #
- 
+
 __help__ = """
 <b> Group Guardian: </b>
 ✪ Daisy can protect your group from NSFW senders, Slag word users and also can force members to use English
@@ -451,4 +451,3 @@ Note: Special credits goes to Julia project and Friday Userbot
  
 """
 __mod_name__ = "Group Guardian"
- 

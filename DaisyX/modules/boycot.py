@@ -1,11 +1,10 @@
-
 import os
 
-from DaisyX.services.pyrogram import pbot
-from DaisyX.function.pluginhelpers import edit_or_reply
-from DaisyX.function.pluginhelpers import convert_to_image
-from pyrogram import filters
 from PIL import Image
+from pyrogram import filters
+
+from DaisyX.function.pluginhelpers import convert_to_image, edit_or_reply
+from DaisyX.services.pyrogram import pbot
 
 
 @pbot.on_message(filters.command("boycott") & ~filters.edited & ~filters.bot)
@@ -40,8 +39,9 @@ async def boycott_kangs(client, message):
     for files in (file_name, img):
         if files and os.path.exists(files):
             os.remove(files)
-            
-__mod_name__ = "BoyCot Image" 
+
+
+__mod_name__ = "BoyCot Image"
 __help__ = """ <b>BoyCot_Img</b> - Creates Boycott Image Like this 🤗
 /boycott (reply to image)
 Powerd By @HermioneMusic_Help"""

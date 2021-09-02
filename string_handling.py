@@ -3,9 +3,8 @@ import time
 from typing import Dict, List
 
 import bleach
-import markdown2
 import emoji
-
+import markdown2
 from telegram import MessageEntity
 from telegram.utils.helpers import escape_markdown
 
@@ -99,9 +98,11 @@ def markdown_parser(
                     for match in LINK_REGEX.finditer(txt)
                 ):
                     continue
-                # else, check the escapes between the prev and last and forcefully escape the url to avoid mangling
+                # else, check the escapes between the prev and last and
+                # forcefully escape the url to avoid mangling
                 else:
-                    # TODO: investigate possible offset bug when lots of emoji are present
+                    # TODO: investigate possible offset bug when lots of emoji
+                    # are present
                     res += _selective_escape(txt[prev:start] or "") + escape_markdown(
                         ent_text
                     )

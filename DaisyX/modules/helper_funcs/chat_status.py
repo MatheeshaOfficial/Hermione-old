@@ -1,26 +1,31 @@
 from functools import wraps
-from telegram import Update, User, Chat, ChatMember
-from telegram.ext import CallbackContext
 from threading import RLock
+
 from cachetools import TTLCache
-from DaisyX import DEL_CMDS, SUDO_USERS, WHITELIST_USERS, SUPPORT_USERS, DEV_USERS
+from telegram import Chat, ChatMember, Update, User
+from telegram.ext import CallbackContext
+
+from DaisyX import DEL_CMDS, DEV_USERS, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS
 from DaisyX.mwt import MWT
 
 # stores admemes in memory for 10 min.
 ADMIN_CACHE = TTLCache(maxsize=512, ttl=60 * 10)
-THREAD_LOCK = RLock()	
+THREAD_LOCK = RLock()
+
 
 def can_delete(chat: Chat, bot_id: int) -> bool:
     return chat.get_member(bot_id).can_delete_messages
 
 
 def is_user_ban_protected(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    if chat.type == 'private' \
-            or user_id in SUDO_USERS \
-            or user_id in DEV_USERS \
-            or user_id in WHITELIST_USERS \
-            or user_id in [777000, 1087968824]\
-            or chat.all_members_are_administrators:
+    if (
+        chat.type == "private"
+        or user_id in SUDO_USERS
+        or user_id in DEV_USERS
+        or user_id in WHITELIST_USERS
+        or user_id in [777000, 1087968824]
+        or chat.all_members_are_administrators
+    ):
         return True
 
     if not member:
@@ -30,14 +35,18 @@ def is_user_ban_protected(chat: Chat, user_id: int, member: ChatMember = None) -
 
 @MWT(timeout=60 * 5)  # Cache admin status for 5 mins to avoid extra requests.
 def is_user_admin(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    if (chat.type == 'private' or user_id in SUDO_USERS or user_id in DEV_USERS or
-            chat.all_members_are_administrators or
-            user_id in [777000, 1087968824
-                       ]):  # Count telegram and Group Anonymous as admin
+    if (
+        chat.type == "private"
+        or user_id in SUDO_USERS
+        or user_id in DEV_USERS
+        or chat.all_members_are_administrators
+        or user_id in [777000, 1087968824]
+    ):  # Count telegram and Group Anonymous as admin
         return True
     if not member:
         member = chat.get_member(user_id)
     return member.status in ("administrator", "creator")
+
 
 def is_bot_admin(chat: Chat, bot_id: int, bot_member: ChatMember = None) -> bool:
     if chat.type == "private" or chat.all_members_are_administrators:
@@ -72,8 +81,7 @@ def can_pin(func):
         if update.effective_chat.get_member(context.bot.id).can_pin_messages:
             return func(update, context, *args, **kwargs)
         update.effective_message.reply_text(
-            "I can't pin messages here! "
-            "Make sure I'm admin and can pin messages."
+            "I can't pin messages here! " "Make sure I'm admin and can pin messages."
         )
 
     return pin_rights
@@ -126,8 +134,8 @@ def user_admin(func):
             pass
 
         elif DEL_CMDS and " " not in update.effective_message.text:
-                 update.effective_message.delete()
-     
+            update.effective_message.delete()
+
         else:
             update.effective_message.reply_text(
                 "You're missing admin rights for using this command!"
@@ -162,18 +170,17 @@ def user_not_admin(func):
     return is_not_admin
 
 
-#Staff
-
-def is_whitelist_plus(chat: Chat,
-                      user_id: int,
-                      member: ChatMember = None) -> bool:
-    return any(user_id in user
-               for user in [WHITELIST_USERS, SUPPORT_USERS, SUDO_USERS, DEV_USERS])
+# Staff
 
 
-def is_support_plus(chat: Chat,
-                    user_id: int,
-                    member: ChatMember = None) -> bool:
+def is_whitelist_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
+    return any(
+        user_id in user
+        for user in [WHITELIST_USERS, SUPPORT_USERS, SUDO_USERS, DEV_USERS]
+    )
+
+
+def is_support_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
     return user_id in SUPPORT_USERS or user_id in SUDO_USERS or user_id in DEV_USERS
 
 
@@ -182,11 +189,9 @@ def is_sudo_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
 
 
 def dev_plus(func):
-
     @wraps(func)
-    def is_dev_plus_func(update: Update, context: CallbackContext, *args,
-                         **kwargs):
-        bot = context.bot
+    def is_dev_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
+        context.bot
         user = update.effective_user
 
         if user.id in DEV_USERS:
@@ -201,16 +206,16 @@ def dev_plus(func):
         else:
             update.effective_message.reply_text(
                 "This is a developer restricted command."
-                " You do not have permissions to run this.")
+                " You do not have permissions to run this."
+            )
 
     return is_dev_plus_func
 
-def sudo_plus(func):
 
+def sudo_plus(func):
     @wraps(func)
-    def is_sudo_plus_func(update: Update, context: CallbackContext, *args,
-                          **kwargs):
-        bot = context.bot
+    def is_sudo_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
+        context.bot
         user = update.effective_user
         chat = update.effective_chat
 
@@ -220,17 +225,14 @@ def sudo_plus(func):
             pass
         elif DEL_CMDS and " " not in update.effective_message.text:
             update.effective_message.delete()
-        
 
     return is_sudo_plus_func
 
 
 def support_plus(func):
-
     @wraps(func)
-    def is_support_plus_func(update: Update, context: CallbackContext, *args,
-                             **kwargs):
-        bot = context.bot
+    def is_support_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
+        context.bot
         user = update.effective_user
         chat = update.effective_chat
 
@@ -243,18 +245,18 @@ def support_plus(func):
 
 
 def whitelist_plus(func):
-
     @wraps(func)
-    def is_whitelist_plus_func(update: Update, context: CallbackContext, *args,
-                               **kwargs):
-        bot = context.bot
+    def is_whitelist_plus_func(
+        update: Update, context: CallbackContext, *args, **kwargs
+    ):
+        context.bot
         user = update.effective_user
         chat = update.effective_chat
 
         if user and is_whitelist_plus(chat, user.id):
             return func(update, context, *args, **kwargs)
         update.effective_message.reply_text(
-            f"You don't have access to use this.\nVisit @{SUPPORT_CHAT}")
+            f"You don't have access to use this.\nVisit @{SUPPORT_CHAT}"
+        )
 
     return is_whitelist_plus_func
-

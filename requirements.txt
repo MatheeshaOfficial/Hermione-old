@@ -22,7 +22,7 @@ jikanpy
 envparse
 hypercorn
 aiocron
-apscheduler==3.6.3
+apscheduler==3.6.8
 requests
 python-rapidjson
 PyYAML>5.0

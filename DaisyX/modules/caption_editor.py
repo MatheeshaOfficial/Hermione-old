@@ -1,4 +1,4 @@
-Copyright (C) 2021 TeamDaisyX
+# Copyright (C) 2021 TeamDaisyX
 
 
 # This file is part of Daisy (Telegram Bot)

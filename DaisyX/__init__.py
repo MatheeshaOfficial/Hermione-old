@@ -27,7 +27,7 @@ from DaisyX.utils.logger import log
 from DaisyX.versions import DAISY_VERSION
 
 log.info("----------------------")
-log.info("|      Daisy X      |")
+log.info("|      Hermione X      |")
 log.info("----------------------")
 log.info("Version: " + DAISY_VERSION)
 
@@ -75,7 +75,7 @@ POSTGRESS_URL = get_str_key("DATABASE_URL", required=True)
 TEMP_DOWNLOAD_DIRECTORY = "./"
 
 # Sudo Users
-# SUDO_USERS = get_str_key("SUDO_USERS", required=True)
+SUDO_USERS = get_str_key("SUDO_USERS", required=True)
 
 # String Session
 STRING_SESSION = get_str_key("STRING_SESSION", required=True)

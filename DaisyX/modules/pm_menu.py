@@ -91,14 +91,11 @@ async def get_start_func(message, strings, edit=False):
     )
     buttons.add(
         InlineKeyboardButton(
-            strings["btn_channel"], url="https://t.me/HermioneUpdates"
+            strings["btn_channel"], url="https://t.me/Hermione_Updates"
         ),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/HermioneMusic_Help"
+            strings["btn_group"], url="https://t.me/HermioneSupport_Official"
         ),
-    )
-    buttons.add(
-        InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
     )
     buttons.add(
         InlineKeyboardButton(

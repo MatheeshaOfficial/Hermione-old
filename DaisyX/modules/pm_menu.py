@@ -86,7 +86,7 @@ async def get_start_func(message, strings, edit=False):
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
             strings["btn_source"],
-            url="https://t.me/percy_jackson_4",
+            url="https://t.me/hermioneslbot",
         ),
     )
     buttons.add(
@@ -99,8 +99,8 @@ async def get_start_func(message, strings, edit=False):
     )
     buttons.add(
         InlineKeyboardButton(
-            "😍Add Hermione to your group",
-            url=f"https://telegram.me/miss_musicybot?startgroup=true",
+            "✚ Add New Hermione to your group ✚",
+            url=f"https://telegram.me/hermioneslbot?startgroup=true",
         ),
     )
 

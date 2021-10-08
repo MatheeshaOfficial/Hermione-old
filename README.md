@@ -123,6 +123,7 @@ Anything missing kindly let us know at [Daisy Support](https://t.me/DaisySupport
 #### • OFFICIAL_BAWWA    »»  <a href="https://github.com/Official_Bawwa" alt="Official_Bawwa"> <img src="https://img.shields.io/badge/Official_Bawwa-90302f?logo=github" /></a>
 #### • Annihilatorrrr   »»  <a href="https://github.com/annihilatorrrr" alt="annihilatorrrr"> <img src="https://img.shields.io/badge/annihilatorrrr-E9E1E9?logo=github" /></a>
 #### • PercyOfficial  »»  <a href="https://github.com/PercyOfficial" alt="PercyOfficial"> <img src="https://img.shields.io/badge/Percy-92CALA?logo=github" /></a>
+#### • Damantha Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha126"> <img src="https://img.shields.io/badge/Percy-92CALA?logo=github" /></a>
 
 ## All who helped at a glance 
 
